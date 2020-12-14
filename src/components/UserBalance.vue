@@ -18,12 +18,12 @@
       created: function() {
 
           let self = this
-          axios.get("https://cajero-api-hc.herokuapp.com/user/balance/" + this.username)
+          axios.get("https://cajero-api.herokuapp.com/user/balance/" + this.username)
               .then((result) => {
                   self.balance = result.data.balance
               })
               .catch((error) => {
-                  alert("ERROR X Servidor");
+                  alert("ERROR Servidor");
               });
       }
   }
